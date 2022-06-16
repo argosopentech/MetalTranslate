@@ -1,2 +1,2 @@
-# Metal Translate
+# MetalTranslate
 High performance machine translation
