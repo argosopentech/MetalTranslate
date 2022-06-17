@@ -1,5 +1,7 @@
 # MetalTranslate custom
 deps
+models
+build/
 
 # Prerequisites
 *.d
