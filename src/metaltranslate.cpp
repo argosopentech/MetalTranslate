@@ -1,16 +1,14 @@
 #include <iostream>
 #include <ctranslate2/translator_pool.h>
-// #include <onmt/Tokenizer.h>
+#include <onmt/Tokenizer.h>
 
 int main() {
-  /*
   onmt::Tokenizer tokenizer(onmt::Tokenizer::Mode::Conservative,
 		  onmt::Tokenizer::Flags::JoinerAnnotate);
   std::vector<std::string> tokens;
   tokenizer.tokenize("Hello World!", tokens);
   for(const auto& token: tokens) std::cout << token << ' ';
   std::cout << std::endl;
-  */
 
   // CTranslate2
   const size_t num_translators = 1;

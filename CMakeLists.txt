@@ -5,6 +5,7 @@ project(MetalTranslate)
 add_executable(metaltranslate src/metaltranslate.cpp)
 
 add_subdirectory(deps/CTranslate2/)
-
 target_link_libraries(metaltranslate ctranslate2)
 
+add_subdirectory(deps/Tokenizer/)
+target_link_libraries(metaltranslate OpenNMTTokenizer)
