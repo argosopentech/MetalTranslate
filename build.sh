@@ -1,9 +1,11 @@
+mkdir -p deps/CTranslate2/build
 cd deps/CTranslate2/build/
 cmake .. -DWITH_MKL=OFF -DOPENMP_RUNTIME=NONE -DWITH_DNNL=ON
 make -j4
 sudo make install
 cd ../../../
 
+mkdir -p deps/Tokenizer/build
 cd deps/Tokenizer/build/
 cmake ..
 make
