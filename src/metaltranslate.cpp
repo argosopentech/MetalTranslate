@@ -5,10 +5,12 @@
 int main() {
   std::string source_str("Hello world, we are translating with MetalTranslate.");
 
-  onmt::Tokenizer tokenizer(onmt::Tokenizer::Mode::Conservative,
-		  onmt::Tokenizer::Flags::JoinerAnnotate);
+  // Tokenizer
+  onmt::Tokenizer tokenizer("models/translate-fairseq_m2m_100_418M/sentencepiece.model");
   std::vector<std::string> tokens;
   tokenizer.tokenize(source_str, tokens);
+
+  std::cout << "Tokens:" << std::endl;
   for(const auto& token: tokens) std::cout << token << ' ';
   std::cout << std::endl;
 
@@ -17,12 +19,19 @@ int main() {
   const size_t num_threads_per_translator = 4;
   ctranslate2::TranslatorPool translator(num_translators,
                                          num_threads_per_translator,
-                                         "models/test/",
+                                         "models/translate-fairseq_m2m_100_418M/model",
                                          ctranslate2::Device::CPU);
 
-  // const std::vector<std::vector<std::string>> batch = {{"▁H", "ello", "▁world", "!"}};
   const std::vector<std::vector<std::string>> batch = {tokens};
-  const std::vector<ctranslate2::TranslationResult> results = translator.translate_batch(batch);
+  const std::vector<std::vector<std::string>> target_prefix = {{"__es__"}};
+  const int max_batch_size = 2024;
+
+  const std::vector<ctranslate2::TranslationResult> results = translator.translate_batch(
+		  batch,
+		  target_prefix);
+
+  std::cout << "Translation Result:" << std::endl;
+  std::cout << "size: " << results[0].output().size() << std::endl;
 
   for (const auto& token : results[0].output())
     std::cout << token << ' ';
