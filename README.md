@@ -5,7 +5,7 @@ High performance machine translation
 Tested on Ubuntu 22.04
 
 ```
-git clone https://github.com/argosopentech/MetalTranslate.git
+git clone --recursive https://github.com/argosopentech/MetalTranslate.git
 cd MetalTranslate
 ./setup.sh
 ./build.sh

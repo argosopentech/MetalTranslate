@@ -7,8 +7,8 @@ add_executable(metaltranslate src/MetalTranslate.cpp)
 set(TARGET_H
     src/MetalTranslate.h)
 
-add_subdirectory(deps/CTranslate2/)
+add_subdirectory(third_party/CTranslate2/)
 target_link_libraries(metaltranslate ctranslate2)
 
-add_subdirectory(deps/Tokenizer/)
+add_subdirectory(third_party/Tokenizer/)
 target_link_libraries(metaltranslate OpenNMTTokenizer)

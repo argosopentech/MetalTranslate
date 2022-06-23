@@ -1,0 +1,6 @@
+[submodule "third_party/CTranslate2"]
+	path = third_party/CTranslate2
+	url = https://github.com/OpenNMT/CTranslate2.git
+[submodule "third_party/Tokenizer"]
+	path = third_party/Tokenizer
+	url = https://github.com/OpenNMT/Tokenizer.git
