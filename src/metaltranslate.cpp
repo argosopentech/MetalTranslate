@@ -10,6 +10,11 @@ int main() {
   std::vector<std::string> tokens;
   tokenizer.tokenize(source_str, tokens);
 
+  /*
+  std::string source_prefix = "__en__";
+  tokens.insert(tokens.begin(), source_prefix);
+  */
+
   std::cout << "Tokens:" << std::endl;
   for(const auto& token: tokens) std::cout << token << ' ';
   std::cout << std::endl;
