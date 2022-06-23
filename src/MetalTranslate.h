@@ -1,11 +1,8 @@
 #include <string>
 
-namespace MetalTranslate {
-class MetalTranslateConfig {
-public:
-  std::string ModelPath = "models/translate-fairseq_m2m_100_418M/";
-};
+#include "MetalTranslateConfig.h"
 
+namespace MetalTranslate {
 class MetalTranslate {
 public:
   MetalTranslate(MetalTranslateConfig config);
