@@ -5,8 +5,10 @@
 int main() {
   std::string source_str("Hello world, we are translating with MetalTranslate.");
 
+  std::string model_dir("models/translate-fairseq_m2m_100_418M/");
+
   // Tokenizer
-  onmt::Tokenizer tokenizer("models/m2m-test/sentencepiece.model");
+  onmt::Tokenizer tokenizer(model_dir + "sentencepiece.model");
   std::vector<std::string> tokens;
   tokenizer.tokenize(source_str, tokens);
 
@@ -22,7 +24,7 @@ int main() {
   const size_t num_threads_per_translator = 4;
   ctranslate2::TranslatorPool translator(num_translators,
                                          num_threads_per_translator,
-                                         "models/m2m-test/model",
+                                         model_dir + "model",
                                          ctranslate2::Device::CPU);
 
   const std::vector<std::vector<std::string>> batch = {tokens};
@@ -34,7 +36,6 @@ int main() {
 		  target_prefix);
 
   std::cout << "Translation Result:" << std::endl;
-  std::cout << "size: " << results[0].output().size() << std::endl;
 
   for (const auto& token : results[0].output())
     std::cout << token << ' ';
