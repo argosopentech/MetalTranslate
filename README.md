@@ -9,7 +9,8 @@ git clone --recursive https://github.com/argosopentech/MetalTranslate.git
 cd MetalTranslate
 ./setup.sh
 ./build.sh
-./run.sh
+./build/metaltranslate "Hello world, translating from MetalTranslate" en es
+
 
 ```
 
