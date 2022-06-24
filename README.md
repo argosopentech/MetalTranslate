@@ -1,5 +1,5 @@
 # MetalTranslate
-High performance machine translation
+Customizable machine translation in C++
 
 ## Quickstart
 Tested on Ubuntu 22.04
