@@ -2,11 +2,11 @@ cmake_minimum_required(VERSION 3.10)
 
 project(MetalTranslate)
 
+add_executable(metaltranslate src/main.cpp)
+
 set(TARGET_H
     src/MetalTranslate.h
     src/MetalTranslateConfig.h)
-
-add_executable(metaltranslate src/main.cpp)
 
 target_sources(metaltranslate PRIVATE src/MetalTranslate.cpp)
 

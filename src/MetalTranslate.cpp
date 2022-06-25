@@ -24,7 +24,7 @@ std::string MetalTranslate::Translate(std::string source,
 
   // CTranslate2
   const size_t num_translators = 1;
-  const size_t num_threads_per_translator = 4;
+  const size_t num_threads_per_translator = 0; // Unused with DNNL
   ctranslate2::TranslatorPool translator(
       num_translators, num_threads_per_translator,
       this->_config.ModelPath + "model", ctranslate2::Device::CPU);
