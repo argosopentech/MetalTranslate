@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Accelerator for CTranslate2
 sudo apt-get install -y libdnnl-dev
 

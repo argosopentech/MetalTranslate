@@ -9,7 +9,7 @@ Tested on Ubuntu 22.04
 ```
 git clone --recursive https://github.com/argosopentech/MetalTranslate.git
 cd MetalTranslate
-./setup.sh
+./init
 ./build.sh
 ./build/metaltranslate "Hello world" en es
 
