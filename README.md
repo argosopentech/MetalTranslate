@@ -16,3 +16,5 @@ cd MetalTranslate
 
 ```
 
+## Usage
+MetalTranslate is designed to be experimental and used as a template for doing machine translation in C++. You will need to modify the [source code](https://github.com/argosopentech/MetalTranslate/blob/main/src/MetalTranslate.cpp) for most use cases.
