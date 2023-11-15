@@ -3,6 +3,8 @@ Customizable machine translation in C++
 
 MetalTranslate downloads and runs a pretrained [CTranslate2](https://github.com/OpenNMT/CTranslate2) translation model and [SentencePiece](https://github.com/google/sentencepiece) tokenizer model to translate locally with C++.
 
+Metal Translate is designed to be a starter template to do machine translation in C++. You will probably need to modify the source code to use MetalTranslate in your own application.
+
 ## Quickstart
 Tested on Ubuntu 22.04
 
