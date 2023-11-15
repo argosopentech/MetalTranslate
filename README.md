@@ -18,7 +18,7 @@ cd MetalTranslate
 ```
 
 ### Windows
-The [as-shura/MetalTranslate fork](https://github.com/as-shura/MetalTranslate/) works on Windows.
+The [as-shura/MetalTranslate fork](https://github.com/as-shura/MetalTranslate/tree/cmake-external-github-repos) works on Windows.
 
 ## Usage
 MetalTranslate is designed to be experimental and used as a template for doing machine translation in C++. You will need to modify the [source code](https://github.com/argosopentech/MetalTranslate/blob/main/src/MetalTranslate.cpp) for most use cases.
