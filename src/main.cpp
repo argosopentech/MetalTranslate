@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
 
   std::string targetCode = "es";
   if (argc > 3) {
-    sourceCode = std::string(argv[3]);
+    targetCode = std::string(argv[3]);
   }
 
   std::string result = metalTranslate.Translate(q, sourceCode, targetCode);
