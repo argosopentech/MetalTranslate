@@ -3,6 +3,6 @@
 namespace MetalTranslate {
 class MetalTranslateConfig {
 public:
-  std::string ModelPath = "models/translate-fairseq_m2m_100_418M/";
+  std::string ModelPath = "models/nllb-200-distilled-600M-int8/";
 };
 } // namespace MetalTranslate
